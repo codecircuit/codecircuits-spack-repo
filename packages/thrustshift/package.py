@@ -43,7 +43,7 @@ class Thrustshift(CMakePackage, CudaPackage):
 
     depends_on('boost +filesystem +program_options cxxstd=17', when='+apps')
     depends_on('boost +test +filesystem cxxstd=17', when='+tests')
-    depends_on('matrixmarket-reader', when='+tests')
+#    depends_on('matrixmarket-reader', when='+tests')
 
     def cmake_args(self):
         # Add arguments other than CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
