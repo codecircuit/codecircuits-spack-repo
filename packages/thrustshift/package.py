@@ -7,14 +7,13 @@ class Thrustshift(CMakePackage, CudaPackage):
     homepage = "https://github.com/codecircuit/thrustshift"
     git      = "https://github.com/codecircuit/thrustshift"
     url      = "https://github.com/codecircuit/thrustshift/archive/refs/heads/master.zip"
-    list_url      = "https://github.com/codecircuit/thrustshift/archive/"
-    list_depth = 2
+#    list_url      = "https://github.com/codecircuit/thrustshift/archive/refs"
+#    list_depth = 1
 
     maintainers = ['codecircuit']
 
-    # FIXME: Add proper versions and checksums here.
-    # version('1.2.3', '0123456789abcdef0123456789abcdef')
     version('master', branch='master')
+    version('0.1','8eaa3d984c29a04f6de972ddab7ffb6d6437ae7565815d747d03e732a146c747', url="https://github.com/codecircuit/thrustshift/archive/refs/tags/v0.1.tar.gz")
 
     variant('cuda', default=True, description='Build with CUDA')
     variant('build_type', default='Release',
